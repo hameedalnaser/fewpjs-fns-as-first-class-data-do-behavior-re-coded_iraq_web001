@@ -8,10 +8,19 @@ function handleClick(e) {
 /* End Given Code, don't edit above here...*/
 
 /* Write your implementation of greet() */
-greet(x) => {
-  alert(x)
+function greet(time) {
+  let timeNumber = parseInt(time.split(':')[0]);
+  if (timeNumber < 12){
+    return 'Good Morning';
+  } else if (timeNumber < 16){
+    return 'Good Afternoon';
+  } else {
+    return 'Good Evening';
+  }
 }
-displayMessage (a)=>{
-  a()
+/* Write your implementation of displayMessage() */
+function displayMessage(message = 'TEST') {
+const h1Greeting = document.getElementById('greeting');
+h1Greeting.innerText = message;
 }
 /* Write your implementation of displayMessage() */
